@@ -1,0 +1,37 @@
+.header {
+    background-color: var(--bg-primary);
+    padding: 30px;
+    text-align: center;
+}
+
+.header .title  {
+  font-size: 50px;
+  color: var(--text-light);
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+.theme-btn {
+  cursor: pointer;
+  padding: 3px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--text-light);
+  background-color: var(--bg-primary);
+  font-size: 17px;
+}

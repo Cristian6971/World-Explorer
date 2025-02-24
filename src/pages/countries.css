@@ -1,0 +1,156 @@
+.countries-container {
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+}
+
+.countries-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.region-filter {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light .region-filter {
+  color: #fff;
+  background-color: rgb(3, 115, 135);
+}
+
+body.dark .region-filter {
+  color: #fff;
+  background-color: rgb(30, 30, 30);
+}
+
+
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.countries-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.countries-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.countries-card-flag {
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.countries-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.countries-container {
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+}
+
+.countries-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.countries-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 20px;
+}
+
+.countries-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.countries-card-flag {
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.countries-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--bg-primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none; 
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--bg-primary-hover);
+  opacity: 1;
+}
+
+.back-to-top:active {
+  transform: scale(0.98);
+}
+
+.back-to-top.show {
+  display: block; 
+}
+
+
+body.light .countries-card {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+body.dark .countries-card {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  border: 1px solid #333;
+}
+
+body.dark .countries-card-flag {
+  border-bottom: 1px solid #444;
+}
+
+body.dark .countries-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.15);
+}
