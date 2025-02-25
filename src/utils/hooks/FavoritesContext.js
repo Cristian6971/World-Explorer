@@ -3,19 +3,21 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
+  const [favorites, setFavorites] = useState(() => {
     const storedFavorites = localStorage.getItem("favorites");
-    if (storedFavorites) {
-      setFavorites(JSON.parse(storedFavorites));
+    try {
+      const parsed = JSON.parse(storedFavorites);
+      // Dacă parsed nu este un array, returnează un array gol
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      // Dacă există eroare la parsare sau nu există, returnează un array gol
+      return [];
     }
-  }, []);
+  });
 
+  // Salvează favoritele în localStorage de fiecare dată când se modifică
   useEffect(() => {
-    if (favorites.length > 0) {
-      localStorage.setItem("favorites", JSON.stringify(favorites));
-    }
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
   const addToFavorites = (country) => {
