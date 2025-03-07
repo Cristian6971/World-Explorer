@@ -3,6 +3,8 @@
 **World Explorer** is a React-based web application designed to provide users with detailed information about countries around the world.  
 The app fetches real-time data from the **REST Countries API**, allowing users to explore key details such as population, region, capital, official languages, and currencies.  
 
+🚀 **Live Demo:** [World Explorer](https://symphonious-snickerdoodle-7d1acb.netlify.app/)  
+
 ---
 
 ## 🔹 Key Features  
